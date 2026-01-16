@@ -207,6 +207,6 @@ Las actividades principales incluyen:
 - **Catalogación y linaje:**  
   Documentación del origen del dato, transformaciones aplicadas, frecuencia de actualización y responsables, facilitando la gobernanza y auditoría.
 
-### Arquitectura del Agente coversacional 
+# Arquitectura del Agente coversacional 
 ![Diagrama de arquitectura](images/arquitectura.png)
 

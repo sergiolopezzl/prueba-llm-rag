@@ -1,6 +1,6 @@
 # Prueba Técnica: Profesional II Analítica Predictiva - Hub de Datos
 
-Este repositorio contiene la solución completa a la prueba técnica para el rol de Analítica Predictiva / Ingeniería de Datos. A continuación, se detalla el diseño de los modelos de datos, las consultas SQL, los scripts en Python y la justificación teórica de los conceptos de GCP e Ingeniería de Datos(excel).
+Este repositorio contiene la solución completa a la prueba técnica para el rol de Analítica Predictiva / Ingeniería de Datos. A continuación, se detalla el diseño de los modelos de datos, las consultas SQL, los scripts en Python y la justificación teórica de los conceptos de GCP e Ingeniería de Datos.
 
 ## Tabla de Contenidos
 1. [Modelo de Datos Relacional (OLTP)](#1-modelo-de-datos-relacional-oltp)
@@ -23,7 +23,9 @@ Se diseñó un modelo en **Tercera Forma Normal (3NF)** para asegurar la integri
 * **Terminales:** Dispositivos asociados a comercios, con control de inventario (papel) y estado.
 * **Transacciones:** Registro detallado de cada operación monetaria, vinculando medios de pago y ubicación geográfica.
 
-### Diagrama Físico (Mermaid Code)
+### Diagrama Físico
+
+![Diagrama Físico](images/arq1.png)
 
 ## 2. Modelo de Datos Dimensional (OLAP) y SQL
 
@@ -36,8 +38,9 @@ Se utilizó un **Esquema en Estrella (Star Schema)** centrado en la tabla de hec
 Se aplicó lógica de **SCD Tipo 2 (Slowly Changing Dimensions)** en las dimensiones de Comercios y Terminales para rastrear cambios históricos de estado, versiones y atributos relevantes, garantizando trazabilidad temporal y consistencia analítica.
 
 
-### Diagrama Dimensional (Mermaid Code)
+### Diagrama Dimensional
 
+![Diagrama Dimensional](images/arq2.png)
 
 ## Consultas SQL (GoogleSQL Dialect)
 
@@ -167,7 +170,9 @@ with open('alertas.avro', 'wb') as out:
 
 Un DAG (Directed Acyclic Graph) es un grafo dirigido que no tiene ciclos. En ingeniería de datos (ej. Airflow), representa un flujo de trabajo donde los nodos son tareas y las aristas son dependencias. El flujo siempre avanza y nunca regresa a una tarea anterior en un bucle infinito.
 
-### Diagrama de Flujo del DAG (Mermaid Code)
+### Diagrama de Flujo del DAG
+
+![Diagrama DAG](images/arq3.png)
 
 ## 6. ETL vs ELT
 
@@ -202,4 +207,6 @@ Las actividades principales incluyen:
 - **Catalogación y linaje:**  
   Documentación del origen del dato, transformaciones aplicadas, frecuencia de actualización y responsables, facilitando la gobernanza y auditoría.
 
+### Arquitectura del Agente coversacional 
+![Diagrama de arquitectura](images/arquitectura.png)
 
